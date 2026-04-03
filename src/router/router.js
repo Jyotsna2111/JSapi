@@ -39,6 +39,7 @@ router.post('/students',async(req,res)=>{
                   res.status(500).send(e);
         }
     });
+    // 
     router.patch('/students/:name',async(req,res)=>{
         try{
              const updatestudent= await  Student.findOneAndUpdate({name:req.params.name}, req.body ,{
