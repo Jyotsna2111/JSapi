@@ -28,6 +28,7 @@ router.post('/students',async(req,res)=>{
     
     router.get('/students/:id', async(req,res)=>{
         try{
+            
            const _id=req.params.id;
           const studentsdata= await Student.findById(_id);
           if(!studentsdata){
